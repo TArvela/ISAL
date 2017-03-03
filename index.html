@@ -1,0 +1,89 @@
+
+
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  
+
+  <title>URL Shortener</title>
+  
+      <style>
+      body{
+  background-color: #e6f2ff;
+  text-align:center;
+  margin: 0px auto 0px auto;
+}
+h1{
+  text-align:center;
+}
+.res{
+  border: solid 1px;
+  width:600px;
+  height: 400px;
+  margin: 50px auto 100px auto;
+  text-align:center;
+}
+.butt{
+  background-color: #4CAF50;
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  
+}</style>
+
+  
+  
+  
+  
+</head>
+
+<body translate="no" >
+
+  <h1>PicSearch</h1>
+<!--<div class="res"> </div> -->
+<div id="res">Look for:<br> 
+  <input name="search" id="form1" type="text"> 
+  <button type="button" onclick="search()">Go !</button>
+</div> <br>
+<div> <button class="butt" type="button" onclick="last()"> Latest Searches</button></div>
+
+
+    <script>
+    //home adress of website
+  var home = ""
+    function search(){
+        var input = document.getElementById("form1").value;
+        var params = {
+        // Request parameters
+        "q": input,
+        "count": "10",
+        "offset": "0",
+        "mkt": "en-us",
+        "safeSearch": "Moderate",
+        };
+      //https://api.cognitive.microsoft.com/bing/v5.0/images/search[?q][&count][&offset][&mkt][&safeSearch]
+
+  var url = home +"api/imagesearch/"+"?q="
+  +params.q+"&count="
+  +params.count+"&offset="
+  +params.offset+"&mkt="
+  +params.mkt+"&safeSearch="
+  +params.safeSearch;
+  window.location = url;
+}
+
+function last(){
+  window.location=home+"latest/"
+}
+  </script>
+
+  
+  
+
+</body>
+</html>
+ 

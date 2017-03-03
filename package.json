@@ -1,0 +1,24 @@
+{
+  "name": "isal",
+  "version": "1.0.0",
+  "description": "Image search API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TArvela/ISAL.git"
+  },
+  "author": "TArvela",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TArvela/ISAL/issues"
+  },
+  "homepage": "https://github.com/TArvela/ISAL#readme",
+  "dependencies": {
+    "mongodb": "^2.2.24",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
